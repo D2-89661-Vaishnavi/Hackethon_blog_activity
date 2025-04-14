@@ -14,10 +14,17 @@ create table user(
     INDEX (id)
 );
 
+create table categories (
+    id integer primary key auto_increment,
+    title varchar(30),
+    description varchar(50),
+    INDEX (id)
+);
+
 create table blogs (
     id integer primary key auto_increment,
     title varchar(20),
-    contents varchar(30),
+    details varchar(30),
     user_id int,
     category_id int,
     createdTimestamp DATETIME default CURRENT_TIMESTAMP,
@@ -27,10 +34,5 @@ create table blogs (
 );
 
 
-create table categories (
-    id integer primary key auto_increment,
-    title varchar(30),
-    description varchar(50),
-    INDEX (id)
-);
+
 

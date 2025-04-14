@@ -5,7 +5,9 @@ const config = require('../utils/config')
 
 function authorization(req, res, next) {
     if (req.url == '/user/registration' ||
-        req.url == '/user/signin')
+        req.url == '/user/signin' ||
+        req.url == '/blogs/all_blogs' ||
+        req.url == '/blogs/:title')
         next()
     else {
         const token = req.headers.token

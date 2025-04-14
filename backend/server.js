@@ -1,6 +1,7 @@
 const express = require('express')
 
 const authorization = require('./routes/authorization')
+const blogsRouter =require ('./routes/blogs')
 const categoriesRouter = require('./routes/categories')
 const userRouter = require('./routes/user')
 
@@ -10,6 +11,8 @@ const app = express()
 
 // app.use(express.static('images'))
 app.use(express.json())
+app.use(authorization)
+app.use('/blogs', blogsRouter)
 app.use('/categories', categoriesRouter)
 app.use('/user', userRouter)
 
