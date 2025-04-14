@@ -11,13 +11,13 @@ function Signin() {
   })
 
 
-  const { token, fullname } = result['data']
-  sessionStorage.setItem('token', token)
-  sessionStorage.setItem('fullname', fullname)
+  // const { token, fullname } = result['data']
+  // sessionStorage.setItem('token', token)
+  // sessionStorage.setItem('fullname', fullname)
   
 
-  // set the context
-  setUser({ fullname, email })
+  // // set the context
+  // setUser({ fullname, email })
 
 
   const {navigate}=useNavigate()
